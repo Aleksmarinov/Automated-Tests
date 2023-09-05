@@ -1,0 +1,166 @@
+
+Making my first automated test:
+
+The file is in side-format.
+
+{
+"id": "1cf3b188-3e96-4165-ab34-86f2ffb09f64",
+"version": "2.0",
+"name": "Foody",
+"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:85",
+"tests": [{
+"id": "baee58ed-8473-44f5-8d1b-0bb24453263d",
+"name": "Testing-Valid-Login-form",
+"commands": [{
+"id": "78c771ee-4c50-49cf-8064-3b521d9c761d",
+"comment": "",
+"command": "open",
+"target": "/",
+"targets": [],
+"value": ""
+}, {
+"id": "bad220a5-554e-4cd8-9ba7-57e6d04fb16e",
+"comment": "",
+"command": "setWindowSize",
+"target": "1552x840",
+"targets": [],
+"value": ""
+}, {
+"id": "f418596b-1860-412d-8695-ba60dc99c4cc",
+"comment": "",
+"command": "click",
+"target": "css=.nav-item:nth-child(2) > .nav-link",
+"targets": [
+["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+["xpath=//a[contains(text(),'Log In')]", "xpath:link"],
+["xpath=//div[@id='navbarResponsive']/ul/ul/li[2]/a", "xpath:idRelative"],
+["xpath=//a[contains(@href, '/User/Login')]", "xpath:href"],
+["xpath=//li[2]/a", "xpath:position"]
+],
+"value": ""
+}, {
+"id": "01c5a56a-8284-49fa-a714-41cf8fc0b021",
+"comment": "",
+"command": "click",
+"target": "id=username",
+"targets": [
+["id=username", "id"],
+["name=Username", "name"],
+["css=#username", "css:finder"],
+["xpath=//input[@id='username']", "xpath:attributes"],
+["xpath=//body[@id='page-top']/section/div/div/div/div/div/div/div/form/div/input", "xpath:idRelative"],
+["xpath=//input", "xpath:position"]
+],
+"value": ""
+}, {
+"id": "92f8b51b-b0d4-483e-bc06-8e42462e3f29",
+"comment": "",
+"command": "type",
+"target": "id=username",
+"targets": [
+["id=username", "id"],
+["name=Username", "name"],
+["css=#username", "css:finder"],
+["xpath=//input[@id='username']", "xpath:attributes"],
+["xpath=//body[@id='page-top']/section/div/div/div/div/div/div/div/form/div/input", "xpath:idRelative"],
+["xpath=//input", "xpath:position"]
+],
+"value": "aleks"
+}, {
+"id": "d20d528e-b765-4920-9794-e6bc6c222c91",
+"comment": "",
+"command": "click",
+"target": "id=password",
+"targets": [
+["id=password", "id"],
+["name=Password", "name"],
+["css=#password", "css:finder"],
+["xpath=//input[@id='password']", "xpath:attributes"],
+["xpath=//body[@id='page-top']/section/div/div/div/div/div/div/div/form/div[2]/input", "xpath:idRelative"],
+["xpath=//div[2]/input", "xpath:position"]
+],
+"value": ""
+}, {
+"id": "ccd62fe5-e66d-4014-bdad-3f30c187e22e",
+"comment": "",
+"command": "type",
+"target": "id=password",
+"targets": [
+["id=password", "id"],
+["name=Password", "name"],
+["css=#password", "css:finder"],
+["xpath=//input[@id='password']", "xpath:attributes"],
+["xpath=//body[@id='page-top']/section/div/div/div/div/div/div/div/form/div[2]/input", "xpath:idRelative"],
+["xpath=//div[2]/input", "xpath:position"]
+],
+"value": "123456"
+}, {
+"id": "169c2a74-fcec-4aae-9d66-68a85e8430ad",
+"comment": "",
+"command": "click",
+"target": "css=.btn-primary",
+"targets": [
+["css=.btn-primary", "css:finder"],
+["xpath=//button[@type='submit']", "xpath:attributes"],
+["xpath=//body[@id='page-top']/section/div/div/div/div/div/div/div/form/div[3]/button", "xpath:idRelative"],
+["xpath=//div[3]/button", "xpath:position"]
+],
+"value": ""
+}, {
+"id": "025549e7-d37b-4b5c-b09f-b3c4ea726e07",
+"comment": "",
+"command": "click",
+"target": "css=.masthead-subheading",
+"targets": [
+["css=.masthead-subheading", "css:finder"],
+["xpath=//body[@id='page-top']/header[2]/div/div/h2", "xpath:idRelative"],
+["xpath=//h2", "xpath:position"],
+["xpath=//h2[contains(.,'Welcome, aleks!')]", "xpath:innerText"]
+],
+"value": ""
+}, {
+"id": "034bc3ba-cdf5-490e-b97a-8b242a949ff9",
+"comment": "",
+"command": "assertText",
+"target": "css=.masthead-subheading",
+"targets": [
+["css=.masthead-subheading", "css:finder"],
+["xpath=//body[@id='page-top']/header[2]/div/div/h2", "xpath:idRelative"],
+["xpath=//h2", "xpath:position"],
+["xpath=//h2[contains(.,'Welcome, aleks!')]", "xpath:innerText"]
+],
+"value": "Welcome, aleks!"
+}, {
+"id": "04d09f53-6895-4a5a-9333-9be13b4d1805",
+"comment": "",
+"command": "click",
+"target": "css=.nav-item:nth-child(2) > .nav-link",
+"targets": [
+["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+["xpath=//div[@id='navbarResponsive']/ul/ul/li[2]/a", "xpath:idRelative"],
+["xpath=//a[contains(@href, '/User/Logout')]", "xpath:href"],
+["xpath=//li[2]/a", "xpath:position"]
+],
+"value": ""
+}, {
+"id": "d44f680a-078a-41fd-8610-6e7f85acfb30",
+"comment": "",
+"command": "close",
+"target": "",
+"targets": [],
+"value": ""
+}]
+}],
+"suites": [{
+"id": "023387a5-8755-4dc2-b9aa-e4df98bfd880",
+"name": "Default Suite",
+"persistSession": false,
+"parallel": false,
+"timeout": 300,
+"tests": ["baee58ed-8473-44f5-8d1b-0bb24453263d"]
+}],
+"urls": ["http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:85/"],
+"plugins": []
+}
+
